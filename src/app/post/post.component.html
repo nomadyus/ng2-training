@@ -8,7 +8,7 @@
     <p class="f6 lh-copy gray mv0 flex-auto">
       By <span class="ttu">Robin Darnell</span>
     </p>
-    <div class="f3 red" (click)="addLike()">
+    <div class="f3 gray" (click)="addLike()" [ngClass]="{red: likeCount}">
       <yus-app-icon-heart></yus-app-icon-heart>
       {{ likeCount }}
     </div>
