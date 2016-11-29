@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'yus-app-post',
@@ -9,10 +9,11 @@ export class PostComponent implements OnInit {
   @Input() title:string;
   @Input() body:string;
 
-  likeCount: number = 0;
+  @Input() likeCount: number = 0;
+  @Output() likeCountChange: EventEmitter<number> = new EventEmitter();
 
   addLike() {
-    this.likeCount ++;
+    this.likeCountChange.emit(this.likeCount + 1);
   }
 
   constructor() { }

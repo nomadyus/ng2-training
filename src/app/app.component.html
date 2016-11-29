@@ -1,4 +1,4 @@
 <section class="mw7 center">
   <h2 class="athelas ph3 ph0-l">My Blog</h2>
-  <yus-app-post [title]="post.title" [body]="post.body"></yus-app-post>
+  <yus-app-post [title]="post.title" [body]="post.body" [likeCount]="post.likeCount" (likeCountChange)="updateLikeCount($event)"></yus-app-post>
 </section>
