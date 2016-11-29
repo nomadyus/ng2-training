@@ -4,8 +4,15 @@
     <p class="f5 f4-l lh-copy athelas">{{ body}}
     </p>
   </div>
-  <p class="f6 lh-copy gray mv0">
-    By <span class="ttu">Robin Darnell</span>
-  </p>
+  <div class="flex">
+    <p class="f6 lh-copy gray mv0 flex-auto">
+      By <span class="ttu">Robin Darnell</span>
+    </p>
+    <div class="f3 red" (click)="addLike()">
+      <yus-app-icon-heart></yus-app-icon-heart>
+      {{ likeCount }}
+    </div>
+  </div>
+
   <yus-app-date>Nov. 21, 2016</yus-app-date>
 </article>

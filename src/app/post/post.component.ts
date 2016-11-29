@@ -9,6 +9,12 @@ export class PostComponent implements OnInit {
   @Input() title:string;
   @Input() body:string;
 
+  likeCount: number = 0;
+
+  addLike() {
+    this.likeCount ++;
+  }
+
   constructor() { }
 
   ngOnInit() {
