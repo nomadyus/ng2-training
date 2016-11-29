@@ -8,6 +8,7 @@ import { PostComponent } from './post/post.component';
 import { DateComponent } from './date/date.component';
 import { HeadingComponent } from './heading/heading.component';
 import { IconHeartComponent } from './icon-heart/icon-heart.component';
+import { PostsListComponent } from './posts-list/posts-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { IconHeartComponent } from './icon-heart/icon-heart.component';
     PostComponent,
     DateComponent,
     HeadingComponent,
-    IconHeartComponent
+    IconHeartComponent,
+    PostsListComponent
   ],
   imports: [
     BrowserModule,
