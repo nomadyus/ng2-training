@@ -1,5 +1,5 @@
 <yus-app-posts-list>
     <yus-app-post [title]="post.title" [body]="post.body" [likeCount]="post.likeCount" (likeCountChange)="postsService.updateLikeCount(post.id, $event)"
-        *ngFor="let post of postsService.posts" [author]="getAuthorName(post.userId)">
+        *ngFor="let post of postsService.posts" [author]="getAuthorName(post.userId)" [date]="post.date">
     </yus-app-post>
 </yus-app-posts-list>

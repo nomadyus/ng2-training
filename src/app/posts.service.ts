@@ -20,7 +20,8 @@ export class PostsService {
 
   normalizesPost(post) {
     return Object.assign({}, post, {
-      likeCount: 0
+      likeCount: 0,
+      date: new Date()
     });
   }
 

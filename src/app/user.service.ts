@@ -14,7 +14,6 @@ export class UserService {
         return users.map(this.normalizesUser);
       })
       .subscribe(users => { this.users = users });
-      console.log(this.users);
   }
 
   normalizesUser(user) {

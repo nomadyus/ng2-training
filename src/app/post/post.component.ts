@@ -13,6 +13,7 @@ export class PostComponent implements OnInit {
   @Output() likeCountChange: EventEmitter<number> = new EventEmitter();
 
   @Input() author:string;
+  @Input() date:Date;
 
   addLike() {
     this.likeCountChange.emit(this.likeCount + 1);
