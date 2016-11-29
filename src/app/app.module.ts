@@ -11,6 +11,7 @@ import { IconHeartComponent } from './icon-heart/icon-heart.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 
 import { PostsService } from './posts.service';
+import { ServerService } from './server.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { PostsService } from './posts.service';
     FormsModule,
     HttpModule
   ],
-  providers: [PostsService],
+  providers: [PostsService, ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
