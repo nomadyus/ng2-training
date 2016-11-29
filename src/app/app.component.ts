@@ -27,7 +27,7 @@ export class AppComponent {
       likeCount: 0
     }
   ]
-
+  
   updateLikeCount(id, likeCount) {
     const index = this.posts.findIndex(post => id === post.id);
     this.posts[index].likeCount = likeCount;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'yus-app-posts-list',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsListComponent implements OnInit {
 
-  constructor() { }
+  @Input() posts:any[];
 
   ngOnInit() {
   }

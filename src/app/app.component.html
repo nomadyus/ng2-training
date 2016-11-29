@@ -1,4 +1,3 @@
-<section class="mw7 center">
-  <h2 class="athelas ph3 ph0-l">My Blog</h2>
-  <yus-app-post [title]="post.title" [body]="post.body" [likeCount]="post.likeCount" (likeCountChange)="updateLikeCount(post.id, $event)" *ngFor="let post of posts"></yus-app-post>
-</section>
+<yus-app-posts-list>
+   <yus-app-post [title]="post.title" [body]="post.body" [likeCount]="post.likeCount" (likeCountChange)="updateLikeCount(post.id, $event)" *ngFor="let post of posts"></yus-app-post>
+</yus-app-posts-list>
