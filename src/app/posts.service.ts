@@ -21,7 +21,7 @@ export class PostsService {
   normalizesPost(post) {
     return Object.assign({}, post, {
       likeCount: 0,
-      date: new Date(Math.random() * Date.parse(new Date()))
+      date: new Date(Math.random() * (new Date()).getTime())
     });
   }
 
