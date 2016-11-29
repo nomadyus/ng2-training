@@ -12,6 +12,7 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 
 import { PostsService } from './posts.service';
 import { ServerService } from './server.service';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ServerService } from './server.service';
     FormsModule,
     HttpModule
   ],
-  providers: [PostsService, ServerService],
+  providers: [PostsService, ServerService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
