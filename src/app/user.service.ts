@@ -10,11 +10,11 @@ export class UserService {
 
   getUsers() {
     this.serverService.get('https://jsonplaceholder.typicode.com/users')
-      .map(res => res.json())
       .map(users => {
         return users.map(this.normalizesUser);
       })
       .subscribe(users => { this.users = users });
+      console.log(this.users);
   }
 
   normalizesUser(user) {

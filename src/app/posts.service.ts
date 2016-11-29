@@ -13,8 +13,8 @@ export class PostsService {
 
   getPosts() {
     this.serverService.get('https://jsonplaceholder.typicode.com/posts')
-      .map(this.normalizesPosts)
-      .do(this.fetchUsers)
+      .map(posts => this.normalizesPosts(posts))
+      .do(posts => this.fetchUsers(posts))
       .subscribe(posts => { this.posts = posts });
   }
 

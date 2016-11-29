@@ -6,7 +6,7 @@
   </div>
   <div class="flex">
     <p class="f6 lh-copy gray mv0 flex-auto">
-      By <span class="ttu">Robin Darnell</span>
+      By <span class="ttu">{{ author }}</span>
     </p>
     <div class="f3 gray" (click)="addLike()" [ngClass]="{red: likeCount}">
       <yus-app-icon-heart></yus-app-icon-heart>
