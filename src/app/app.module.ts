@@ -15,6 +15,7 @@ import { ServerService } from './server.service';
 import { UserService } from './user.service';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { HomeContainerComponent } from './home-container/home-container.component';
+import { PostContainerComponent } from './post-container/post-container.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeContainerComponent } from './home-container/home-container.componen
     IconHeartComponent,
     PostsListComponent,
     SearchbarComponent,
-    HomeContainerComponent
+    HomeContainerComponent,
+    PostContainerComponent
   ],
   imports: [
     BrowserModule,
