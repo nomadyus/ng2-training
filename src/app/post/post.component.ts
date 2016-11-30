@@ -14,6 +14,7 @@ export class PostComponent implements OnInit {
 
   @Input() author:string;
   @Input() date:Date;
+  @Input() id:number;
 
   addLike() {
     this.likeCountChange.emit(this.likeCount + 1);
