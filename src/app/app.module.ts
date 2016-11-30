@@ -18,7 +18,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { HomeContainerComponent } from './home-container/home-container.component';
 import { PostContainerComponent } from './post-container/post-container.component';
 
-import { Routing } from './router.config';
+import { routing } from './router.config';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { Routing } from './router.config';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [PostsService, ServerService, UserService],
   bootstrap: [AppComponent]
