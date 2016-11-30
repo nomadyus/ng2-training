@@ -19,7 +19,9 @@ export class PostsService {
   }
 
   getPost(id: number) {
-    return this.posts.find(post => post.id === id);
+    return this.serverService.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .map(post => this.normalizesPost(post))
+      .do(post => this.fetchUser(post.userId))
   }
 
   normalizesPost(post) {
@@ -39,17 +41,21 @@ export class PostsService {
     })
   }
 
+  fetchUser(id) {
+    return this.userService.getUser(id);
+  }
+
   updateLikeCount(id, likeCount) {
     const index = this.posts.findIndex(post => id === post.id);
     this.posts[index].likeCount = likeCount;
   }
 
-  getFilteredPost(query:string) {
+  getFilteredPost(query: string) {
     if (!this.posts)
       return [];
-    
+
     return this.posts.filter(post => {
-      return post.title.toLowerCase().includes(query.toLowerCase()) 
+      return post.title.toLowerCase().includes(query.toLowerCase())
     })
   }
 
