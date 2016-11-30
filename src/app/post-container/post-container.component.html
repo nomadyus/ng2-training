@@ -1,3 +1,3 @@
-<p>
-  post-container works!
-</p>
+<yus-app-post [title]="post.title" [body]="post.body" [likeCount]="post.likeCount" (likeCountChange)="postsService.updateLikeCount(post.id, $event)"
+  [author]="userService.getAuthorName(post.userId)" [date]="post.date" [id]="post.id">
+</yus-app-post>

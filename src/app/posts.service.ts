@@ -18,6 +18,10 @@ export class PostsService {
       .subscribe(posts => { this.posts = posts });
   }
 
+  getPost(id: number) {
+    return this.posts.find(post => post.id === id);
+  }
+
   normalizesPost(post) {
     return Object.assign({}, post, {
       likeCount: 0,

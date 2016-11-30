@@ -16,10 +16,6 @@ export class HomeContainerComponent implements OnInit {
     this.userService.getUsers();
   }
 
-  getAuthorName(id) {
-    return this.userService.users[id]? this.userService.users[id].name : 'N/A';
-  }
-
   ngOnInit() {
   }
 

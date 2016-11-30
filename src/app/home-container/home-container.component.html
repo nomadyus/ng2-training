@@ -1,6 +1,6 @@
 <yus-app-searchbar (search)="query = $event"></yus-app-searchbar>
 <yus-app-posts-list>
     <yus-app-post [title]="post.title" [body]="post.body" [likeCount]="post.likeCount" (likeCountChange)="postsService.updateLikeCount(post.id, $event)"
-        *ngFor="let post of postsService.getFilteredPost(query)" [author]="getAuthorName(post.userId)" [date]="post.date" [id]="post.id">
+        *ngFor="let post of postsService.getFilteredPost(query)" [author]="userService.getAuthorName(post.userId)" [date]="post.date" [id]="post.id">
     </yus-app-post>
 </yus-app-posts-list>

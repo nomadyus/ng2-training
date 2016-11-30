@@ -4,8 +4,8 @@ import { PostContainerComponent } from './post-container/post-container.componen
 
 export const routes: Routes = [
   { path: '', redirectTo: 'posts', pathMatch: 'full'},
-  { path: 'posts', component: HomeContainerComponent},
-  { path: 'posts/:id', component: PostContainerComponent}
+  { path: 'posts/:id', component: PostContainerComponent},
+  { path: 'posts', component: HomeContainerComponent}
 ]
 
 const routing = RouterModule.forRoot(routes);

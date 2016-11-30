@@ -25,4 +25,8 @@ export class UserService {
       .subscribe(user => { this.users[id] = user });
   }
 
+  getAuthorName(id) {
+    return this.users[id]? this.users[id].name : 'N/A';
+  }
+
 }

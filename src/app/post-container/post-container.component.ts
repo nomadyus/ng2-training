@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PostsService } from '../posts.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'yus-app-post-container',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostContainerComponent implements OnInit {
 
-  constructor() { }
+  post: any = {};
+
+  constructor(private route: ActivatedRoute, private postsService: PostsService, private userService:UserService) { }
 
   ngOnInit() {
+    this.route.params.subscribe((params) => {
+      this.post = this.postsService.getPost(Number(params['id']));
+    })
   }
 
 }
