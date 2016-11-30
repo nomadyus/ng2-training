@@ -13,6 +13,7 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostsService } from './posts.service';
 import { ServerService } from './server.service';
 import { UserService } from './user.service';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserService } from './user.service';
     DateComponent,
     HeadingComponent,
     IconHeartComponent,
-    PostsListComponent
+    PostsListComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,

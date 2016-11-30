@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { PostsService } from '../posts.service';
 
 @Component({
   selector: 'yus-app-searchbar',
@@ -9,7 +10,13 @@ export class SearchbarComponent implements OnInit {
 
   constructor() { }
 
+  @Output() search:EventEmitter<string> = new EventEmitter();
+
   ngOnInit() {
+  }
+
+  submit(searchForm) {
+    this.search.emit(searchForm.value.query);
   }
 
 }

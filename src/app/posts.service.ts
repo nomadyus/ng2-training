@@ -40,4 +40,13 @@ export class PostsService {
     this.posts[index].likeCount = likeCount;
   }
 
+  getFilteredPost(query:string) {
+    if (!this.posts)
+      return [];
+    
+    return this.posts.filter(post => {
+      return post.title.toLowerCase().includes(query.toLowerCase()) 
+    })
+  }
+
 }

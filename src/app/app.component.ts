@@ -9,6 +9,8 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
 
+  query:string = '';
+
   constructor(private postsService:PostsService, private userService:UserService){
     this.postsService.getPosts();
     this.userService.getUsers();
